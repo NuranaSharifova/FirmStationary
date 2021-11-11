@@ -156,5 +156,11 @@ namespace FirmStationary
            
            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Practice2 form2 = new Practice2(GetConnection());
+            form2.ShowDialog();
+        }
     }
 }
