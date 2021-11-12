@@ -22,7 +22,7 @@ namespace FirmStationary
         private void pbutton_Click(object sender, EventArgs e)
         {
             string query = "";
-        
+   
             switch ((sender as Button).Name)
             {
                 case "pbutton":
@@ -65,22 +65,32 @@ namespace FirmStationary
                     break;
             }
             _formconnection.Open();
-  
+         
+
             SqlCommand command = new SqlCommand(query, _formconnection);
-            SqlParameter param = new SqlParameter("@name", textBox1.Text.ToString());
-            SqlParameter param2 = new SqlParameter("@typeid", Convert.ToInt32(textBox3.Text.ToString()));
-            SqlParameter param3 = new SqlParameter("@price", Convert.ToInt32(textBox2.Text.ToString()));
+            
             SqlParameter param4 = new SqlParameter("@name", textBox4.Text.ToString());
-            SqlParameter param5 = new SqlParameter("@amount", Convert.ToInt32(textBox5.Text.ToString()));
+            SqlParameter param = new SqlParameter("@name", textBox1.Text.ToString());
+            SqlParameter param2 = new SqlParameter("@typeid", SqlDbType.Int);
+            param2.Value = textBox3.Text;
+            SqlParameter param3 = new SqlParameter("@price", SqlDbType.Int);
+            param3.Value = textBox2.Text;
+            SqlParameter param5 = new SqlParameter("@amount", SqlDbType.Int);
+            param5.Value = textBox5.Text;
             SqlParameter param6 = new SqlParameter("@name", textBox6.Text.ToString());
             SqlParameter param7 = new SqlParameter("@name", textBox7.Text.ToString());
-            SqlParameter param8 = new SqlParameter("@id", Convert.ToInt32(textBox8.Text.ToString()));
-            SqlParameter param9 = new SqlParameter("@id", Convert.ToInt32(textBox9.Text.ToString()));
-            SqlParameter param10 = new SqlParameter("@id", Convert.ToInt32(textBox10.Text.ToString()));
-            SqlParameter param11 = new SqlParameter("@id", Convert.ToInt32(textBox11.Text.ToString()));
+            SqlParameter param8 = new SqlParameter("@id", SqlDbType.Int);
+            SqlParameter param9 = new SqlParameter("@id", SqlDbType.Int);
+            SqlParameter param10 = new SqlParameter("@id", SqlDbType.Int);
+            SqlParameter param11 = new SqlParameter("@id", SqlDbType.Int);
+            param8.Value = textBox8.Text;
+            param9.Value = textBox9.Text;
+            param10.Value = textBox10.Text;
+            param11.Value = textBox11.Text;
             switch ((sender as Button).Name)
             {
-                case "pbutton":
+                case "pbutton" :
+                   
                     command.Parameters.Add(param);
                     command.Parameters.Add(param2);
                     command.Parameters.Add(param3);                  
@@ -96,9 +106,7 @@ namespace FirmStationary
                     command.Parameters.Add(param7);
                     break;
                 case "upproduct":
-                    command.Parameters.Add(param);
-                    command.Parameters.Add(param2);
-                    command.Parameters.Add(param3);
+
                     command.Parameters.Add(param8);
                     break;
                 case "uptype":
@@ -130,7 +138,7 @@ namespace FirmStationary
                     break;
             }
             command.ExecuteNonQuery();
-            MessageBox.Show("Succesful insert");
+            MessageBox.Show("Succesful operation");
             _formconnection.Close();
         }
 
