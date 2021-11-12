@@ -40,10 +40,10 @@ namespace FirmStationary
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.upproduct = new System.Windows.Forms.Button();
+            this.upcomp = new System.Windows.Forms.Button();
+            this.upmanager = new System.Windows.Forms.Button();
+            this.uptype = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,13 +52,25 @@ namespace FirmStationary
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.delcomp = new System.Windows.Forms.Button();
+            this.delmanager = new System.Windows.Forms.Button();
+            this.deltype = new System.Windows.Forms.Button();
+            this.delproduct = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.b1 = new System.Windows.Forms.Button();
+            this.dataV = new System.Windows.Forms.DataGridView();
+            this.b2 = new System.Windows.Forms.Button();
+            this.b8 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.b3 = new System.Windows.Forms.Button();
+            this.b4 = new System.Windows.Forms.Button();
+            this.b5 = new System.Windows.Forms.Button();
+            this.b6 = new System.Windows.Forms.Button();
+            this.b7 = new System.Windows.Forms.Button();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataV)).BeginInit();
             this.SuspendLayout();
             // 
             // pbutton
@@ -150,41 +162,45 @@ namespace FirmStationary
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 12;
             // 
-            // button1
+            // upproduct
             // 
-            this.button1.Location = new System.Drawing.Point(459, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Update PRODUCTS Where ID";
-            this.button1.UseVisualStyleBackColor = true;
+            this.upproduct.Location = new System.Drawing.Point(459, 30);
+            this.upproduct.Name = "upproduct";
+            this.upproduct.Size = new System.Drawing.Size(229, 23);
+            this.upproduct.TabIndex = 13;
+            this.upproduct.Text = "Update PRODUCTS Where ID";
+            this.upproduct.UseVisualStyleBackColor = true;
+            this.upproduct.Click += new System.EventHandler(this.pbutton_Click);
             // 
-            // button2
+            // upcomp
             // 
-            this.button2.Location = new System.Drawing.Point(459, 206);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Update COMPANY Where ID";
-            this.button2.UseVisualStyleBackColor = true;
+            this.upcomp.Location = new System.Drawing.Point(459, 206);
+            this.upcomp.Name = "upcomp";
+            this.upcomp.Size = new System.Drawing.Size(229, 23);
+            this.upcomp.TabIndex = 14;
+            this.upcomp.Text = "Update COMPANY Where ID";
+            this.upcomp.UseVisualStyleBackColor = true;
+            this.upcomp.Click += new System.EventHandler(this.pbutton_Click);
             // 
-            // button3
+            // upmanager
             // 
-            this.button3.Location = new System.Drawing.Point(459, 143);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(229, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Update MANAGER Where ID";
-            this.button3.UseVisualStyleBackColor = true;
+            this.upmanager.Location = new System.Drawing.Point(459, 143);
+            this.upmanager.Name = "upmanager";
+            this.upmanager.Size = new System.Drawing.Size(229, 23);
+            this.upmanager.TabIndex = 15;
+            this.upmanager.Text = "Update MANAGER Where ID";
+            this.upmanager.UseVisualStyleBackColor = true;
+            this.upmanager.Click += new System.EventHandler(this.pbutton_Click);
             // 
-            // button4
+            // uptype
             // 
-            this.button4.Location = new System.Drawing.Point(459, 90);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(229, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Update TYPE Where ID";
-            this.button4.UseVisualStyleBackColor = true;
+            this.uptype.Location = new System.Drawing.Point(459, 90);
+            this.uptype.Name = "uptype";
+            this.uptype.Size = new System.Drawing.Size(229, 23);
+            this.uptype.TabIndex = 16;
+            this.uptype.Text = "Update TYPE Where ID";
+            this.uptype.UseVisualStyleBackColor = true;
+            this.uptype.Click += new System.EventHandler(this.pbutton_Click);
             // 
             // label1
             // 
@@ -256,41 +272,45 @@ namespace FirmStationary
             this.label7.TabIndex = 24;
             this.label7.Text = "Name";
             // 
-            // button8
+            // delcomp
             // 
-            this.button8.Location = new System.Drawing.Point(708, 205);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(199, 23);
-            this.button8.TabIndex = 28;
-            this.button8.Text = "Delete COMPANY Where ID";
-            this.button8.UseVisualStyleBackColor = true;
+            this.delcomp.Location = new System.Drawing.Point(708, 205);
+            this.delcomp.Name = "delcomp";
+            this.delcomp.Size = new System.Drawing.Size(199, 23);
+            this.delcomp.TabIndex = 28;
+            this.delcomp.Text = "Delete COMPANY Where ID";
+            this.delcomp.UseVisualStyleBackColor = true;
+            this.delcomp.Click += new System.EventHandler(this.pbutton_Click);
             // 
-            // button7
+            // delmanager
             // 
-            this.button7.Location = new System.Drawing.Point(708, 143);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(199, 23);
-            this.button7.TabIndex = 29;
-            this.button7.Text = "Delete MANAGER Where ID";
-            this.button7.UseVisualStyleBackColor = true;
+            this.delmanager.Location = new System.Drawing.Point(708, 143);
+            this.delmanager.Name = "delmanager";
+            this.delmanager.Size = new System.Drawing.Size(199, 23);
+            this.delmanager.TabIndex = 29;
+            this.delmanager.Text = "Delete MANAGER Where ID";
+            this.delmanager.UseVisualStyleBackColor = true;
+            this.delmanager.Click += new System.EventHandler(this.pbutton_Click);
             // 
-            // button6
+            // deltype
             // 
-            this.button6.Location = new System.Drawing.Point(708, 90);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(199, 23);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Delete TYPE Where ID";
-            this.button6.UseVisualStyleBackColor = true;
+            this.deltype.Location = new System.Drawing.Point(708, 90);
+            this.deltype.Name = "deltype";
+            this.deltype.Size = new System.Drawing.Size(199, 23);
+            this.deltype.TabIndex = 30;
+            this.deltype.Text = "Delete TYPE Where ID";
+            this.deltype.UseVisualStyleBackColor = true;
+            this.deltype.Click += new System.EventHandler(this.pbutton_Click);
             // 
-            // button5
+            // delproduct
             // 
-            this.button5.Location = new System.Drawing.Point(708, 32);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(199, 23);
-            this.button5.TabIndex = 31;
-            this.button5.Text = "Delete PRODUCTS Where ID";
-            this.button5.UseVisualStyleBackColor = true;
+            this.delproduct.Location = new System.Drawing.Point(708, 32);
+            this.delproduct.Name = "delproduct";
+            this.delproduct.Size = new System.Drawing.Size(199, 23);
+            this.delproduct.TabIndex = 31;
+            this.delproduct.Text = "Delete PRODUCTS Where ID";
+            this.delproduct.UseVisualStyleBackColor = true;
+            this.delproduct.Click += new System.EventHandler(this.pbutton_Click);
             // 
             // textBox9
             // 
@@ -313,18 +333,131 @@ namespace FirmStationary
             this.textBox11.Size = new System.Drawing.Size(100, 20);
             this.textBox11.TabIndex = 34;
             // 
+            // b1
+            // 
+            this.b1.Location = new System.Drawing.Point(14, 271);
+            this.b1.Name = "b1";
+            this.b1.Size = new System.Drawing.Size(75, 23);
+            this.b1.TabIndex = 35;
+            this.b1.Text = "Most Sales";
+            this.b1.UseVisualStyleBackColor = true;
+            this.b1.Click += new System.EventHandler(this.m1_Click);
+            // 
+            // dataV
+            // 
+            this.dataV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataV.Location = new System.Drawing.Point(14, 342);
+            this.dataV.Name = "dataV";
+            this.dataV.Size = new System.Drawing.Size(1013, 213);
+            this.dataV.TabIndex = 36;
+            // 
+            // b2
+            // 
+            this.b2.Location = new System.Drawing.Point(95, 270);
+            this.b2.Name = "b2";
+            this.b2.Size = new System.Drawing.Size(93, 23);
+            this.b2.TabIndex = 37;
+            this.b2.Text = "Profit";
+            this.b2.UseVisualStyleBackColor = true;
+            this.b2.Click += new System.EventHandler(this.m1_Click);
+            // 
+            // b8
+            // 
+            this.b8.Location = new System.Drawing.Point(95, 300);
+            this.b8.Name = "b8";
+            this.b8.Size = new System.Drawing.Size(93, 23);
+            this.b8.TabIndex = 38;
+            this.b8.Text = "Profit for Date";
+            this.b8.UseVisualStyleBackColor = true;
+            this.b8.Click += new System.EventHandler(this.m1_Click);
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(14, 302);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(75, 20);
+            this.textBox12.TabIndex = 39;
+            // 
+            // b3
+            // 
+            this.b3.Location = new System.Drawing.Point(195, 270);
+            this.b3.Name = "b3";
+            this.b3.Size = new System.Drawing.Size(94, 23);
+            this.b3.TabIndex = 40;
+            this.b3.Text = "Best Company";
+            this.b3.UseVisualStyleBackColor = true;
+            this.b3.Click += new System.EventHandler(this.m1_Click);
+            // 
+            // b4
+            // 
+            this.b4.Location = new System.Drawing.Point(295, 270);
+            this.b4.Name = "b4";
+            this.b4.Size = new System.Drawing.Size(108, 23);
+            this.b4.TabIndex = 41;
+            this.b4.Text = "BestSeller Product";
+            this.b4.UseVisualStyleBackColor = true;
+            this.b4.Click += new System.EventHandler(this.m1_Click);
+            // 
+            // b5
+            // 
+            this.b5.Location = new System.Drawing.Point(409, 270);
+            this.b5.Name = "b5";
+            this.b5.Size = new System.Drawing.Size(129, 23);
+            this.b5.TabIndex = 42;
+            this.b5.Text = "Most Profitable Product";
+            this.b5.UseVisualStyleBackColor = true;
+            this.b5.Click += new System.EventHandler(this.m1_Click);
+            // 
+            // b6
+            // 
+            this.b6.Location = new System.Drawing.Point(544, 270);
+            this.b6.Name = "b6";
+            this.b6.Size = new System.Drawing.Size(96, 23);
+            this.b6.TabIndex = 43;
+            this.b6.Text = "Popular Product";
+            this.b6.UseVisualStyleBackColor = true;
+            this.b6.Click += new System.EventHandler(this.m1_Click);
+            // 
+            // b7
+            // 
+            this.b7.Location = new System.Drawing.Point(646, 270);
+            this.b7.Name = "b7";
+            this.b7.Size = new System.Drawing.Size(120, 23);
+            this.b7.TabIndex = 44;
+            this.b7.Text = "Less Popular Product";
+            this.b7.UseVisualStyleBackColor = true;
+            this.b7.Click += new System.EventHandler(this.m1_Click);
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(772, 271);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 20);
+            this.textBox13.TabIndex = 45;
+            // 
             // Practice2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 377);
+            this.ClientSize = new System.Drawing.Size(1039, 583);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.b7);
+            this.Controls.Add(this.b6);
+            this.Controls.Add(this.b5);
+            this.Controls.Add(this.b4);
+            this.Controls.Add(this.b3);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.b8);
+            this.Controls.Add(this.b2);
+            this.Controls.Add(this.dataV);
+            this.Controls.Add(this.b1);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.delproduct);
+            this.Controls.Add(this.deltype);
+            this.Controls.Add(this.delmanager);
+            this.Controls.Add(this.delcomp);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -333,10 +466,10 @@ namespace FirmStationary
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.uptype);
+            this.Controls.Add(this.upmanager);
+            this.Controls.Add(this.upcomp);
+            this.Controls.Add(this.upproduct);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -350,6 +483,7 @@ namespace FirmStationary
             this.Controls.Add(this.pbutton);
             this.Name = "Practice2";
             this.Text = "Practice2";
+            ((System.ComponentModel.ISupportInitialize)(this.dataV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,10 +502,10 @@ namespace FirmStationary
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button upproduct;
+        private System.Windows.Forms.Button upcomp;
+        private System.Windows.Forms.Button upmanager;
+        private System.Windows.Forms.Button uptype;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -380,12 +514,23 @@ namespace FirmStationary
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button delcomp;
+        private System.Windows.Forms.Button delmanager;
+        private System.Windows.Forms.Button deltype;
+        private System.Windows.Forms.Button delproduct;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button b1;
+        private System.Windows.Forms.DataGridView dataV;
+        private System.Windows.Forms.Button b2;
+        private System.Windows.Forms.Button b8;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Button b3;
+        private System.Windows.Forms.Button b4;
+        private System.Windows.Forms.Button b5;
+        private System.Windows.Forms.Button b6;
+        private System.Windows.Forms.Button b7;
+        private System.Windows.Forms.TextBox textBox13;
     }
 }
